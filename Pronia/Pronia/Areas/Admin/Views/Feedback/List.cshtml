@@ -1,0 +1,53 @@
+﻿@model List<ListItemViewModel>
+
+<div class="col-lg-12">
+    <div class="row justify-content-end">
+        <div class="">
+            <a asp-controller="feedback" asp-action="add" target="_blank" class="btn btn-secondary">Add new Feedback</a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">FeedBacks</h4>
+        </div><!--end card-header-->
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>FullName</th>
+                            <th>Role</th>
+                            <th>Content</th>
+                            <th>CreatedAt</th>
+                            <th>UpdatedAt</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var feedback in Model)
+                        {
+                            <tr>
+                                <td><img style="width:50%" src="~/@feedback.ImageURL"></td>
+                                <td>@feedback.FullName</td>
+                                <td>@feedback.Content</td>
+                                <td>@feedback.Role</td>
+                                <td>@feedback.CreatedAt.ToString("dd/MM/yyyy")</td>
+                                <td>@feedback.UpdatedAt.ToString("dd/MM/yyyy")</td>
+                                <td class="text-end">
+                                    <a asp-route="admin-feedback-update" asp-route-id="@feedback.Id"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <form method="POST" asp-route="admin-feedback-delete" asp-route-id="@feedback.Id" id="book-form-@feedback.Id"></form>
+                                    <button type="submit" form="book-form-@feedback.Id">
+                                        <i class="las la-trash-alt text-secondary font-16"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table><!--end /table-->
+            </div><!--end /tableresponsive-->
+        </div><!--end card-body-->
+    </div><!--end card-->
+</div>

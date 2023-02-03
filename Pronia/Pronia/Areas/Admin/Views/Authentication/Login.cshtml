@@ -1,0 +1,104 @@
+﻿@using Pronia.Areas.Admin.ViewModels.Authentication
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Pronia - Login | Register</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="description"
+          content="Pronia plant store bootstrap 5 template is an awesome website template for any home plant shop." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+          type="image/x-icon"
+          href="assets/images/favicon.ico" />
+
+    <!-- CSS
+    ============================================ -->
+
+    <link asp-append-version="true" rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>
+    <link asp-append-version="true" rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css" />
+    <link asp-append-version="true" rel="stylesheet" href="assets/css/Pe-icon-7-stroke.css" type="text/css" />
+    <link asp-append-version="true" rel="stylesheet" href="assets/css/animate.min.css" type="text/css" />
+    <link asp-append-version="true" rel="stylesheet" href="assets/css/swiper-bundle.min.css" type="text/css" />
+    <link asp-append-version="true" rel="stylesheet" href="assets/css/nice-select.css" type="text/css" />
+    <link asp-append-version="true" rel="stylesheet" href="assets/css/magnific-popup.min.css" type="text/css" />
+    <link asp-append-version="true" rel="stylesheet" href="assets/css/ion.rangeSlider.min.css" type="text/css" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body id="body" class="auth-page" style="background-image: url('/admin/assets/images/lockscreen-bg.jpg'); background-size: cover; background-position: center center;">
+    <main class="main-content">
+        <div class="breadcrumb-area breadcrumb-height"
+             data-bg-image="assets/images/breadcrumb/bg/1-1-1919x388.jpg">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb-item">
+                            <h2 class="breadcrumb-heading">Register Page</h2>
+                            <ul>
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>Register</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login-register-area section-space-y-axis-100">
+            <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <form method="POST" asp-route="admin-auth-login" class="my-4">
+                            <div class="login-form">
+                                <h4 class="login-title">Login</h4>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <label>Email</label>
+                                        <label asp-for="Email" class="form-label"></label>
+                                        <input asp-for="Email" class="form-control" placeholder="Enter email">
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <label>Password</label>
+                                        <label asp-for="Email" class="form-label"></label>
+                                        <input asp-for="Email" class="form-control" placeholder="Enter password">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="check-box">
+                                            <input type="checkbox" id="remember_me" />
+                                            <label for="remember_me">Remember me</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 pt-1 mt-md-0">
+                                        <div class="forgotton-password_info">
+                                            <a href="#"> Forgotten password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 pt-5">
+                                        <button class="btn btn-custom-size lg-size btn-pronia-primary" type="submit">
+                                            Login
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script asp-append-version="true" src="~/assets/js/main.js"></script>
+</body>
+</html>

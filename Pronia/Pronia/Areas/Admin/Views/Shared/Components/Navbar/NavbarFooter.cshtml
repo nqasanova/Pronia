@@ -1,0 +1,19 @@
+﻿
+@model List<Pronia.Database.Models.Navbar>
+
+@foreach (var navbar in @Model)
+{
+    <div class=" col-xl-3 col-lg-2 col-sm-6">
+        <div class="single-footer pb--40">
+            <div class="footer-title">
+                <a href="@navbar.URL">@navbar.Name</a>
+            </div>
+            <ul class="footer-list normal-list">
+                @foreach (var subnavbar in navbar.SubNavbars)
+                {
+                    <li><a href="@subnavbar.URL">@subnavbar.Name</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+}

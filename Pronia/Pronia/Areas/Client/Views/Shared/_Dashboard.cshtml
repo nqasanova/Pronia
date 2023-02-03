@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<main class="main-content">
+    <div class="breadcrumb-area breadcrumb-height"
+         data-bg-image="assets/images/breadcrumb/bg/1-1-1919x388.jpg">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-item">
+                        <h2 class="breadcrumb-heading">My Account Page</h2>
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>My Account</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="account-page-area section-space-y-axis-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="nav myaccount-tab-trigger"
+                        id="account-page-tab"
+                        role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-route="client-account-dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-route="client-order-dashboard">Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-route="client-adress-dashboard">Addresses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-route="client-account-detail">Account Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-route="client-logout-dashboard">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9">
+                    <div class="tab-content myaccount-tab-content">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

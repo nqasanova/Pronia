@@ -1,0 +1,12 @@
+﻿@using Pronia.Areas.Client.ViewModels.ShopPage
+@model List<TagListItemViewModel>
+
+<h2 class="widgets-title mb-4">Populer Tags</h2>
+<ul class="widgets-tag">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a asp-route="client-shoppage-index" asp-route-tagId="@item.Id">@item.Name</a>
+        </li>
+    }
+</ul>

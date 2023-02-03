@@ -1,0 +1,15 @@
+﻿
+@*@model List<Pronia.Database.Models.Navbar>
+
+@foreach (var navbar in @Model)
+{
+    <li class="menu-item has-children">
+        <a href="@navbar.URL" style="font-weight : @(navbar.IsMain ? "bolder;" : "normal;" )"> @navbar.Name</a>
+        <ul class="sub-menu">
+            @foreach (var subnavbar in navbar.SubNavbars)
+            {
+                <li> <a href="@subnavbar.URL">@subnavbar.Name</a></li>
+            }
+        </ul>
+    </li>
+}*@

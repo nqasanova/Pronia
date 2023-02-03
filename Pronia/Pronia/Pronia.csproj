@@ -1,0 +1,180 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.Relational" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="AspNetCore.IServiceCollection.AddIUrlHelper" />
+    <None Remove="FluentValidation.AspNetCore" />
+    <None Remove="MailKit" />
+    <None Remove="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" />
+    <None Remove="Migrations\" />
+    <None Remove="Areas\Admin\Views\Shared\" />
+    <None Remove="Areas\Admin\Views\Shared\Components\" />
+    <None Remove="Areas\Client\Views\Shared\Partials\" />
+    <None Remove="Areas\Client\Views\Shared\Components\" />
+    <None Remove="Areas\Client\Views\Shared\Components\ShopCart\" />
+    <None Remove="Areas\Admin\Views\Shared\Components\Navbar\" />
+    <None Remove="Areas\Admin\ViewModels\Category\" />
+    <None Remove="Areas\Admin\ViewModels\Color\" />
+    <None Remove="Areas\Admin\ViewModels\Tag\" />
+    <None Remove="Areas\Admin\ViewModels\Size\" />
+    <None Remove="Areas\Admin\Validators\ProductImage\" />
+    <None Remove="Contracts\ProductImage\" />
+    <None Remove="Areas\Client\Views\Account\" />
+    <None Remove="Areas\Admin\ViewModels\Blog\" />
+    <None Remove="Areas\Admin\Views\Tag\" />
+    <None Remove="Areas\Admin\Views\Size\" />
+    <None Remove="Areas\Admin\Views\ProductImage\" />
+    <None Remove="Areas\Admin\ViewModels\Product\Add\" />
+    <None Remove="Areas\Admin\Views\Blog\" />
+    <None Remove="Areas\Admin\Views\PaymentBenefits\" />
+    <None Remove="Areas\Client\ViewModels\Account\" />
+    <None Remove="Areas\Client\Views\Shared\Components\ShopPageTag\" />
+    <None Remove="Areas\Client\Views\Shared\Components\ShopPageColor\" />
+    <None Remove="Areas\Client\Views\Shared\Components\ShopPageCategory\" />
+    <None Remove="Areas\Client\Views\Shared\Components\Product\" />
+    <None Remove="Areas\Admin\ViewModels\About\" />
+    <None Remove="Areas\Admin\Views\About\" />
+    <None Remove="Areas\Admin\ViewModels\User\" />
+    <None Remove="Areas\Admin\ViewModels\Role\" />
+    <None Remove="Contracts\Order\" />
+    <None Remove="Areas\Client\ViewModels\About\" />
+    <None Remove="Areas\Client\Views\About\" />
+    <None Remove="Areas\Client\ViewModels\ShopPage\" />
+    <None Remove="Areas\Client\Views\ShopPage\" />
+    <None Remove="Areas\Admin\ViewModels\BlogFile\" />
+    <None Remove="Areas\Admin\Views\BlogFile\" />
+    <None Remove="Areas\Admin\Views\Category\" />
+    <None Remove="Areas\Admin\Views\Color\" />
+    <None Remove="Areas\Admin\ViewModels\Contact\" />
+    <None Remove="Areas\Admin\Views\Contact\" />
+    <None Remove="Areas\Admin\Views\Dashboard\" />
+    <None Remove="Areas\Admin\ViewModels\Feedback\" />
+    <None Remove="Areas\Admin\Views\Feedback\" />
+    <None Remove="Areas\Admin\ViewModels\Order\" />
+    <None Remove="Areas\Admin\ViewModels\Reward\" />
+    <None Remove="Areas\Admin\Views\Reward\" />
+    <None Remove="BCrypt" />
+    <None Remove="BCrypt.Net-Core" />
+    <None Remove="Areas\Client\ViewModels\ProductDetails\" />
+    <None Remove="Areas\Client\ViewModels\Product\" />
+    <None Remove="Areas\Client\ViewModels\Home\Modal\" />
+    <None Remove="Areas\Client\ViewModels\BlogDetail\" />
+    <None Remove="Areas\Client\ViewModels\BlogPage\" />
+    <None Remove="Areas\Client\ViewModels\Checkout\" />
+    <None Remove="Areas\Client\ViewModels\Contact\" />
+    <None Remove="Areas\Client\ViewModels\OrderProducts\" />
+    <None Remove="Areas\Client\Views\BlogDetail\" />
+    <None Remove="Areas\Client\Views\BlogPage\" />
+    <None Remove="Areas\Client\Views\Cart\" />
+    <None Remove="Areas\Client\Views\Contact\" />
+    <None Remove="Areas\Client\Views\ProductDetails\" />
+    <None Remove="Areas\Client\Views\Shared\Components\BlogPageCategory\" />
+    <None Remove="Areas\Client\Views\Shared\Components\BlogPageTag\" />
+    <None Remove="Areas\Client\Views\Shared\Components\Cart\" />
+    <None Remove="Areas\Client\Views\Shared\Components\NewProduct\" />
+    <None Remove="Areas\Client\Views\Shared\Components\NavbarHeaderViewComponent\" />
+    <None Remove="Areas\Client\Views\Home\" />
+    <None Remove="Areas\Client\Views\Shared\Components\ProductComponent\" />
+    <None Remove="Areas\Admin\Views\User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="AspNetCore.IServiceCollection.AddIUrlHelper" Version="1.1.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="MailKit" Version="3.4.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.11" />
+    <PackageReference Include="BCrypt" Version="1.0.0" />
+    <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Admin\Views\Shared\Components\" />
+    <Folder Include="Areas\Client\Views\Shared\Partials\" />
+    <Folder Include="Areas\Client\Views\Shared\Components\" />
+    <Folder Include="Areas\Client\Views\Shared\Components\ShopCart\" />
+    <Folder Include="Areas\Admin\Views\Shared\Components\Navbar\" />
+    <Folder Include="Areas\Admin\ViewModels\Category\" />
+    <Folder Include="Areas\Admin\ViewModels\Color\" />
+    <Folder Include="Areas\Admin\ViewModels\Tag\" />
+    <Folder Include="Areas\Admin\ViewModels\Size\" />
+    <Folder Include="Areas\Admin\Validators\ProductImage\" />
+    <Folder Include="Contracts\ProductImage\" />
+    <Folder Include="Areas\Client\Views\Account\" />
+    <Folder Include="Areas\Admin\ViewModels\Blog\" />
+    <Folder Include="Areas\Admin\Views\Tag\" />
+    <Folder Include="Areas\Admin\Views\Size\" />
+    <Folder Include="Areas\Admin\Views\ProductImage\" />
+    <Folder Include="Areas\Admin\ViewModels\Product\Add\" />
+    <Folder Include="Areas\Admin\Views\Blog\" />
+    <Folder Include="Areas\Admin\Views\PaymentBenefits\" />
+    <Folder Include="Areas\Client\ViewModels\Account\" />
+    <Folder Include="Areas\Client\Views\Shared\Components\ShopPageTag\" />
+    <Folder Include="Areas\Client\Views\Shared\Components\ShopPageColor\" />
+    <Folder Include="Areas\Client\Views\Shared\Components\ShopPageCategory\" />
+    <Folder Include="Areas\Admin\ViewModels\About\" />
+    <Folder Include="Areas\Admin\Views\About\" />
+    <Folder Include="Areas\Admin\ViewModels\Category\" />
+    <Folder Include="Areas\Admin\ViewModels\User\" />
+    <Folder Include="Areas\Admin\ViewModels\Role\" />
+    <Folder Include="Contracts\Order\" />
+    <Folder Include="Areas\Client\ViewModels\About\" />
+    <Folder Include="Areas\Client\Views\About\" />
+    <Folder Include="Areas\Client\ViewModels\ShopPage\" />
+    <Folder Include="Areas\Client\Views\ShopPage\" />
+    <Folder Include="Areas\Admin\ViewModels\BlogFile\" />
+    <Folder Include="Areas\Admin\Views\BlogFile\" />
+    <Folder Include="Areas\Admin\Views\Category\" />
+    <Folder Include="Areas\Admin\Views\Color\" />
+    <Folder Include="Areas\Admin\ViewModels\Contact\" />
+    <Folder Include="Areas\Admin\Views\Contact\" />
+    <Folder Include="Areas\Admin\Views\Dashboard\" />
+    <Folder Include="Areas\Admin\ViewModels\Feedback\" />
+    <Folder Include="Areas\Admin\Views\Feedback\" />
+    <Folder Include="Areas\Admin\ViewModels\Order\" />
+    <Folder Include="Areas\Admin\ViewModels\Reward\" />
+    <Folder Include="Areas\Admin\Views\Reward\" />
+    <Folder Include="Areas\Admin\ViewModels\User\" />
+    <Folder Include="Areas\Client\ViewModels\ProductDetails\" />
+    <Folder Include="Areas\Client\ViewModels\Product\" />
+    <Folder Include="Areas\Client\ViewModels\Home\Modal\" />
+    <Folder Include="Areas\Client\ViewModels\BlogDetail\" />
+    <Folder Include="Areas\Client\ViewModels\BlogPage\" />
+    <Folder Include="Areas\Client\ViewModels\Checkout\" />
+    <Folder Include="Areas\Client\ViewModels\Contact\" />
+    <Folder Include="Areas\Client\ViewModels\OrderProducts\" />
+    <Folder Include="Areas\Client\Views\BlogDetail\" />
+    <Folder Include="Areas\Client\Views\BlogPage\" />
+    <Folder Include="Areas\Client\Views\Cart\" />
+    <Folder Include="Areas\Client\Views\Contact\" />
+    <Folder Include="Areas\Client\Views\ProductDetails\" />
+    <Folder Include="Areas\Client\Views\Shared\Components\BlogPageCategory\" />
+    <Folder Include="Areas\Client\Views\Shared\Components\BlogPageTag\" />
+    <Folder Include="Areas\Client\Views\Shared\Components\Cart\" />
+    <Folder Include="Areas\Client\Views\Shared\Components\NewProduct\" />
+    <Folder Include="Areas\Client\Views\Shared\Components\NavbarHeaderViewComponent\" />
+    <Folder Include="Areas\Client\Views\Home\" />
+    <Folder Include="Areas\Client\Views\Shared\Components\ProductComponent\" />
+    <Folder Include="Areas\Admin\Views\User\" />
+  </ItemGroup>
+</Project>

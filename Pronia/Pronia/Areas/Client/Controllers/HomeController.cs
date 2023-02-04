@@ -34,6 +34,25 @@ namespace Pronia.Areas.Client.Controllers
         {
             var model = new IndexViewModel
             {
+                Blogs = await _dbContext.Blogs.Include(b => b.BlogFiles).Select(b => new BlogListItemViewModel(
+                    b.Id,
+                    b.Name,
+                    b.Description,
+                    b.BlogFiles!.Take(1).FirstOrDefault() != null
+                    ? _fileService.GetFileUrl(b.BlogFiles.Take(1).FirstOrDefault()!.FileNameInFileSystem, UploadDirectory.Blog)
+                    : String.Empty,
+
+                    b.BlogFiles.FirstOrDefault().IsImage,
+                    b.BlogFiles.FirstOrDefault().IsVideo,
+                    b.CreatedAt))
+                .ToListAsync(),
+
+                Rewards = await _dbContext.Rewards.Select(r => new RewardListItemViewModel(
+                    r.Id,
+                    _fileService.GetFileUrl(r.ImageNameInFileSystem, UploadDirectory.Reward)
+                    ))
+                .ToListAsync(),
+
                 Sliders = await _dbContext.Sliders.OrderBy(s => s.Order).Select(b => new SliderListItemViewModel(
                     b.Title,
                     b.Content,
@@ -58,26 +77,8 @@ namespace Pronia.Areas.Client.Controllers
                     f.Role,
                    _fileService.GetFileUrl(f.ProfilePhoteInFileSystem, UploadDirectory.Feedback)))
                 .ToListAsync(),
-
-                Rewards = await _dbContext.Rewards.Select(r => new RewardListItemViewModel(
-                    r.Id,
-                    _fileService.GetFileUrl(r.ImageNameInFileSystem, UploadDirectory.Reward)
-                    ))
-                .ToListAsync(),
-
-                Blogs = await _dbContext.Blogs.Include(b => b.BlogFiles).Select(b => new BlogListItemViewModel(
-                b.Id,
-                b.Name,
-                b.Description,
-
-                b.BlogFiles!.Take(1).FirstOrDefault() != null
-                ? _fileService.GetFileUrl(b.BlogFiles.Take(1).FirstOrDefault()!.FileNameInFileSystem, UploadDirectory.Blog)
-                : String.Empty,
-                b.BlogFiles.FirstOrDefault().IsImage,
-                b.BlogFiles.FirstOrDefault().IsVideo,
-                b.CreatedAt))
-                .ToListAsync(),
             };
+
             return View(model);
         }
 

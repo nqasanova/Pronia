@@ -19,7 +19,7 @@ namespace Pronia.Database.Configurations
 
             builder
                 .HasOne(op => op.Product)
-                .WithMany(p => p.OrderProducts)
+                .WithMany(product => product.OrderProducts)
                 .HasForeignKey(op => op.ProductId);
         }
     }

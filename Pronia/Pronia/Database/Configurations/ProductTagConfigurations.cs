@@ -13,7 +13,7 @@ namespace Pronia.Database.Configurations
                 .ToTable("ProductTags");
 
             builder
-               .HasOne(pt => pt.Product)
+               .HasOne(pi => pi.Product)
                .WithMany(p => p.ProductTags)
                .HasForeignKey(pt => pt.ProductId);
         }

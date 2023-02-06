@@ -27,7 +27,6 @@ namespace Pronia.Areas.Client.ViewModels.BlogPage
             Categories = categories;
         }
 
-
         public class TagViewModel
         {
             public string Name { get; set; }

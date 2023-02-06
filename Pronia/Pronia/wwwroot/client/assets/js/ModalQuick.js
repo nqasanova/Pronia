@@ -1,6 +1,4 @@
 ﻿$(document).on("click", ".show-plant-modal", function (e) {
-    console.log("Hello 1");
-
     e.preventDefault();
 
     var url = e.target.href;
@@ -20,7 +18,6 @@
 let btns = document.querySelectorAll(".add-product-to-basket-btn")
 
 btns.forEach(x => x.addEventListener("click", function (e) {
-    console.log("Hello 2");
 
     e.preventDefault()
     console.log(e.target.href)
@@ -33,7 +30,6 @@ btns.forEach(x => x.addEventListener("click", function (e) {
 }))
 
 $(document).on("click", ".add-product-to-basket-modal", function (e) {
-    console.log("Hello 1");
 
     e.preventDefault();
 
@@ -45,7 +41,6 @@ $(document).on("click", ".add-product-to-basket-modal", function (e) {
 })
 
 $(document).on("click", ".add-details-basket", function (e) {
-    console.log("Hello 1");
 
     e.preventDefault();
 
@@ -57,12 +52,7 @@ $(document).on("click", ".add-details-basket", function (e) {
 })
 
 
-
-
-
-
 $(document).on("click", ".remove-product-to-basket-btn", function (e) {
-    console.log("Hello 1");
 
     e.preventDefault();
 
@@ -75,7 +65,6 @@ $(document).on("click", ".remove-product-to-basket-btn", function (e) {
 
 
 $(document).on("click", ".plus-btn", function (e) {
-    console.log("Hello 1");
 
     e.preventDefault();
 
@@ -93,7 +82,6 @@ $(document).on("click", ".plus-btn", function (e) {
 })
 
 $(document).on("click", ".minus-btn", function (e) {
-    console.log("Hello 1");
 
     e.preventDefault();
 
@@ -111,11 +99,7 @@ $(document).on("click", ".minus-btn", function (e) {
 })
 
 
-
-
 $(document).on("change", '.searchProductByPrice', function (e) {
-    console.log("Hello 1");
-
 
     e.preventDefault();
     let minPrice = e.target.previousElementSibling.children[0].children[3].innerText.slice(1);
@@ -133,21 +117,14 @@ $(document).on("change", '.searchProductByPrice', function (e) {
             data: {
                 MinPrice: MinPrice,
                 MaxPrice: MaxPrice
-
             },
 
             success: function (response) {
                 FilterSlider.html(response);
-
-
-
-
             },
             error: function (err) {
                 $(".product-details-modal").html(err.responseText);
 
             }
-
         });
-
 })

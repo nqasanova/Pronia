@@ -1,7 +1,6 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@using Pronia.Areas.Client.ViewComponents;
-@using Pronia.Services.Abstracts;
-@inject IUserService userService;
+@using Pronia.Areas.Client.ViewComponents
+@using Pronia.Database.Models
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -500,6 +499,7 @@
             </div>
             <div class="offcanvas-minicart_wrapper" id="miniCart">
                 <div class="offcanvas-body cart-block">
+
                     @await Component.InvokeAsync(nameof(ShopCart))
                 </div>
             </div>
@@ -682,7 +682,6 @@
             </div>
         </div>
         <!-- Footer Area End Here -->
-
         <!-- Begin Modal Area -->
         <div class="modal quick-view-modal fade"
              id="quickModal"
@@ -705,13 +704,12 @@
                                 data-tippy-arrow="true"
                                 data-tippy-theme="sharpborder"></button>
                     </div>
-                    <div class="modal-body product-details-modal">
+                    <div class="modal-body plant-details-modal">
                     </div>
                 </div>
             </div>
         </div>
         <!-- Modal Area End Here -->
-
         <!-- Begin Scroll To Top -->
         <a class="scroll-to-top" href="">
             <i class="fa fa-angle-double-up"></i>

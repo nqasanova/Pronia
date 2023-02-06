@@ -176,5 +176,19 @@
     <Folder Include="Areas\Client\Views\Home\" />
     <Folder Include="Areas\Client\Views\Shared\Components\ProductComponent\" />
     <Folder Include="Areas\Admin\Views\User\" />
+    <Folder Include="wwwroot\client\custom-files\sliders\" />
+    <Folder Include="wwwroot\client\custom-files\rewards\" />
+    <Folder Include="wwwroot\client\custom-files\plants\" />
+    <Folder Include="wwwroot\client\custom-files\payments\" />
+    <Folder Include="wwwroot\client\custom-files\feedbacks\" />
+    <Folder Include="wwwroot\client\custom-files\blogs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\client\custom-files\sliders\" />
+    <Content Remove="wwwroot\client\custom-files\rewards\" />
+    <Content Remove="wwwroot\client\custom-files\plants\" />
+    <Content Remove="wwwroot\client\custom-files\payments\" />
+    <Content Remove="wwwroot\client\custom-files\feedbacks\" />
+    <Content Remove="wwwroot\client\custom-files\blogs\" />
   </ItemGroup>
 </Project>

@@ -32,7 +32,7 @@
                             {
                                 <div class="d-none">
                                     <b>Search By :</b>
-                                    @Html.RadioButton("searchBy","Name",true) <text>Name</text>
+                                    @Html.RadioButton("searchBy", "Name", true) <text>Name</text>
                                     <br />
                                 </div>
                                 @Html.TextBox("search")
@@ -152,6 +152,7 @@
                          role="tabpanel"
                          aria-labelledby="grid-view-tab">
                         <div class="product-grid-view row g-y-20">
+
                             @foreach (var item in Model)
                             {
                                 <div class="col-md-4 col-sm-6">
@@ -159,36 +160,36 @@
                                         <div class="product-img">
                                             <a href="single-product-variable.html">
                                                 <img class="primary-img"
-                                                 src="~/@item.ImageURL"
-                                                 alt="Product Images" />
+                                                     src="~/@item.ImageURL"
+                                                     alt="Product Images" />
                                                 <img class="secondary-img"
-                                                 src="~/@item.ImageURL"
-                                                 alt="Product Images" />
+                                                     src="~/@item.ImageURL"
+                                                     alt="Product Images" />
                                             </a>
                                             <div class="product-add-action">
                                                 <ul>
                                                     <li class="quuickview-btn">
-                                                        <a class="show-product-modal" asp-route="product-modal" asp-route-id="@item.Id" data-toggle="modal" data-target="#quickModal"
-                                                       data-tippy="Quickview"
-                                                       data-tippy-inertia="true"
-                                                       data-tippy-animation="shift-away"
-                                                       data-tippy-delay="50"
-                                                       data-tippy-arrow="true"
-                                                       data-tippy-theme="sharpborder">
+                                                        <a class="show-product-modal" asp-route="plant-modal" asp-route-id="@item.Id" data-toggle="modal" data-target="#quickModal"
+                                                           data-tippy="Quickview"
+                                                           data-tippy-inertia="true"
+                                                           data-tippy-animation="shift-away"
+                                                           data-tippy-delay="50"
+                                                           data-tippy-arrow="true"
+                                                           data-tippy-theme="sharpborder">
                                                             SHOW
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a class="add-product-to-basket-btn" asp-route="client-basket-add"
-                                                       asp-route-id="@item.Id"
-                                                       data-id="@item.Id"
-                                                       data-tippy="Add to cart"
-                                                       data-tippy-inertia="true"
-                                                       data-tippy-animation="shift-away"
-                                                       data-tippy-delay="50"
-                                                       data-tippy-arrow="true"
-                                                       data-tippy-theme="sharpborder">
-                                                           ADD
+                                                           asp-route-id="@item.Id"
+                                                           data-id="@item.Id"
+                                                           data-tippy="Add to cart"
+                                                           data-tippy-inertia="true"
+                                                           data-tippy-animation="shift-away"
+                                                           data-tippy-delay="50"
+                                                           data-tippy-arrow="true"
+                                                           data-tippy-theme="sharpborder">
+                                                            ADD
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -196,7 +197,7 @@
                                         </div>
                                         <div class="product-content">
                                             <a class="product-name"
-                                           href="single-product-variable.html">@item.Name</a>
+                                               href="single-product-variable.html">@item.Name</a>
                                             <div class="price-box pb-1">
                                                 <span class="new-price">$@item.Price</span>
                                             </div>
@@ -227,36 +228,36 @@
                                         <div class="product-img">
                                             <a href="single-product-variable.html">
                                                 <img class="primary-img"
-                                                 src="~/@item.ImageURL"
-                                                 alt="Product Images" />
+                                                     src="~/@item.ImageURL"
+                                                     alt="Product Images" />
                                                 <img class="secondary-img"
-                                                 src="~/@item.ImageURL"
-                                                 alt="Product Images" />
+                                                     src="~/@item.ImageURL"
+                                                     alt="Product Images" />
                                             </a>
                                             <div class="product-add-action">
                                                 <ul>
                                                     <li class="quuickview-btn">
-                                                        <a class="show-product-modal" asp-route="product-modal" asp-route-id="@item.Id" data-toggle="modal" data-target="#quickModal"
-                                                       data-tippy="Quickview"
-                                                       data-tippy-inertia="true"
-                                                       data-tippy-animation="shift-away"
-                                                       data-tippy-delay="50"
-                                                       data-tippy-arrow="true"
-                                                       data-tippy-theme="sharpborder">
+                                                        <a class="show-product-modal" asp-route="plant-modal" asp-route-id="@item.Id" data-toggle="modal" data-target="#quickModal"
+                                                           data-tippy="Quickview"
+                                                           data-tippy-inertia="true"
+                                                           data-tippy-animation="shift-away"
+                                                           data-tippy-delay="50"
+                                                           data-tippy-arrow="true"
+                                                           data-tippy-theme="sharpborder">
                                                             SHOW
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a class="add-product-to-basket-btn" asp-route="client-basket-add"
-                                                       asp-route-id="@item.Id"
-                                                       data-id="@item.Id"
-                                                       data-tippy="Add to cart"
-                                                       data-tippy-inertia="true"
-                                                       data-tippy-animation="shift-away"
-                                                       data-tippy-delay="50"
-                                                       data-tippy-arrow="true"
-                                                       data-tippy-theme="sharpborder">
-                                                           ADD
+                                                           asp-route-id="@item.Id"
+                                                           data-id="@item.Id"
+                                                           data-tippy="Add to cart"
+                                                           data-tippy-inertia="true"
+                                                           data-tippy-animation="shift-away"
+                                                           data-tippy-delay="50"
+                                                           data-tippy-arrow="true"
+                                                           data-tippy-theme="sharpborder">
+                                                            ADD
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -264,7 +265,7 @@
                                         </div>
                                         <div class="product-content">
                                             <a class="product-name"
-                                           href="single-product-variable.html">@item.Name</a>
+                                               href="single-product-variable.html">@item.Name</a>
                                             <div class="price-box pb-1">
                                                 <span class="new-price">$@item.Price</span>
                                             </div>

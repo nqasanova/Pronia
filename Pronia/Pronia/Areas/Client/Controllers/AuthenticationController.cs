@@ -1,15 +1,14 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Pronia.Areas.Client.ViewModels.Authentication;
+﻿using Pronia.Areas.Client.ViewModels.Authentication;
 using Pronia.Database;
 using Pronia.Services.Abstracts;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Pronia.Areas.Client.Controllers
 {
     [Area("client")]
     [Route("auth")]
-    public class AuthenticationController : Controller
+    public class AuthenticationController :Controller
     {
         private readonly DataContext _dbContext;
         private readonly IUserService _userService;
@@ -20,7 +19,6 @@ namespace Pronia.Areas.Client.Controllers
             _userService = userService;
         }
 
-        #region Login and Logout
 
         [HttpGet("login", Name = "client-auth-login")]
         public async Task<IActionResult> LoginAsync()
@@ -47,31 +45,19 @@ namespace Pronia.Areas.Client.Controllers
                 return View(model);
             }
 
-            if (!await _userService.CheckEmailConfirmedAsync(model!.Email))
-            {
-                ModelState.AddModelError(String.Empty, "Email is not confirmed");
-                return View(model);
-            }
+            //if (!await _userService.CheckEmailConfirmedAsync(model!.Email))
+            //{
+            //    ModelState.AddModelError(String.Empty, "Email is not confirmed");
+            //    return View(model);
+            //}
 
             await _userService.SignInAsync(model!.Email, model!.Password);
 
             return RedirectToRoute("client-home-index");
         }
 
-        [HttpGet("logout", Name = "client-auth-logout")]
-        public async Task<IActionResult> LogoutAsync()
-        {
-            await _userService.SignOutAsync();
-
-            return RedirectToRoute("client-home-index");
-        }
-
-        #endregion
-
-        #region Register
-
         [HttpGet("register", Name = "client-auth-register")]
-        public ViewResult Register()
+        public async Task<IActionResult> RegisterAsync()
         {
             return View(new RegisterViewModel());
         }
@@ -105,7 +91,7 @@ namespace Pronia.Areas.Client.Controllers
 
             if (DateTime.Now > userActivation!.ExpireDate)
             {
-                return Ok("Token is expired");
+                return Ok("Token expired unfortunately");
             }
 
             userActivation!.User!.IsEmailConfirmed = true;
@@ -114,7 +100,5 @@ namespace Pronia.Areas.Client.Controllers
 
             return RedirectToRoute("client-auth-login");
         }
-
-        #endregion
     }
 }

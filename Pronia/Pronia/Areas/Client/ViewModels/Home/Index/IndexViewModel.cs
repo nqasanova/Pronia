@@ -7,7 +7,6 @@ namespace Pronia.Areas.Client.ViewModels.Home.Index
     {
         public List<BlogListItemViewModel> Blogs { get; set; }
         public List<ProductListItemViewModel> Products { get; set; }
-        public List<RewardListItemViewModel> Rewards { get; set; }
         public List<SliderListItemViewModel> Sliders { get; set; }
         public List<PaymentBListItemViewModel> PaymentBenefits { get; set; }
         public List<FeedbackListItemViewModel> Feedbacks { get; set; }

@@ -1,4 +1,4 @@
-﻿$(document).on("click", ".show-plant-modal", function (e) {
+﻿$(document).on("click", ".show-product-modal", function (e) {
     e.preventDefault();
 
     var url = e.target.href;
@@ -7,7 +7,7 @@
     fetch(url)
         .then(response => response.text())
         .then(data => {
-            $('.plant-details-modal').html(data);
+            $('.product-details-modal').html(data);
             console.log(data)
         })
 

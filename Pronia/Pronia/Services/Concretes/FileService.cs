@@ -61,8 +61,6 @@ namespace Pronia.Services.Concretes
                     return Path.Combine(startPath, "paymentbenefits");
                 case UploadDirectory.Feedback:
                     return Path.Combine(startPath, "feedbacks");
-                case UploadDirectory.Reward:
-                    return Path.Combine(startPath, "rewards");
                 case UploadDirectory.Blog:
                     return Path.Combine(startPath, "blogs");
                 default:
@@ -89,8 +87,6 @@ namespace Pronia.Services.Concretes
                     return $"{initialSegment}/paymentbenefits/{fileName}";
                 case UploadDirectory.Feedback:
                     return $"{initialSegment}/feedbacks/{fileName}";
-                case UploadDirectory.Reward:
-                    return $"{initialSegment}/rewards/{fileName}";
                 case UploadDirectory.Blog:
                     return $"{initialSegment}/blogs/{fileName}";
                 default:

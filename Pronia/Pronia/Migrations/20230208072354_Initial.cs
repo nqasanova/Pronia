@@ -209,22 +209,6 @@ namespace Pronia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Rewards",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ImageName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImageNameInFileSystem = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Rewards", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
                 {
@@ -852,9 +836,6 @@ namespace Pronia.Migrations
 
             migrationBuilder.DropTable(
                 name: "ProductTags");
-
-            migrationBuilder.DropTable(
-                name: "Rewards");
 
             migrationBuilder.DropTable(
                 name: "Sliders");

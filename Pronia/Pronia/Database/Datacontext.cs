@@ -27,7 +27,6 @@ namespace Pronia.Database
         public DbSet<About> Abouts { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<Reward> Rewards { get; set; }
         public DbSet<Navbar> Navbars { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Basket> Baskets { get; set; }

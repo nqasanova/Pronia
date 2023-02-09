@@ -31,9 +31,6 @@ namespace Pronia.Areas.Client.Controllers
                 Abouts = await _dbContext.Abouts.Select(b => new ListItemViewModel(b.Content))
                 .ToListAsync(),
 
-                Rewards = await _dbContext.Rewards.Select(r => new RewardListItemViewModel(r.Id, _fileService.GetFileUrl(r.ImageNameInFileSystem, UploadDirectory.Reward)))
-                .ToListAsync(),
-
                 PaymentBenefits = await _dbContext.PaymentBenefits.Select(p => new PaymentBListItemViewModel(p.Id, p.Title, p.Content, _fileService.GetFileUrl(p.ImageNameInFileSystem, UploadDirectory.PaymentBenefit)))
                 .ToListAsync(),
             };

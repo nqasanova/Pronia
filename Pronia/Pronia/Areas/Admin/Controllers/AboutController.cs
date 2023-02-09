@@ -61,7 +61,7 @@ namespace Pronia.Areas.Admin.Controllers
 
             if (!ModelState.IsValid) return View(model);
 
-            if (!_dataContext.Abouts.Any(n => n.Id == model.Id)) return View(model);
+            if (!_dataContext.Abouts.Any(a => a.Id == model.Id)) return View(model);
 
             color.Content = model.Content;
 

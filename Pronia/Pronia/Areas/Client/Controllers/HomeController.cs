@@ -10,7 +10,6 @@ using Pronia.Database;
 using Pronia.Database.Models;
 using Pronia.Services.Abstracts;
 using PaymentBListItemViewModel = Pronia.Areas.Client.ViewModels.Home.Index.PaymentBListItemViewModel;
-using RewardListItemViewModel = Pronia.Areas.Client.ViewModels.Home.Index.RewardListItemViewModel;
 
 namespace Pronia.Areas.Client.Controllers
 {
@@ -45,12 +44,6 @@ namespace Pronia.Areas.Client.Controllers
                     b.BlogFiles.FirstOrDefault().IsImage,
                     b.BlogFiles.FirstOrDefault().IsVideo,
                     b.CreatedAt))
-                .ToListAsync(),
-
-                Rewards = await _dbContext.Rewards.Select(r => new RewardListItemViewModel(
-                    r.Id,
-                    _fileService.GetFileUrl(r.ImageNameInFileSystem, UploadDirectory.Reward)
-                    ))
                 .ToListAsync(),
 
                 Sliders = await _dbContext.Sliders.OrderBy(s => s.Order).Select(b => new SliderListItemViewModel(

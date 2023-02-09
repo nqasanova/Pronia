@@ -2,6 +2,8 @@
     Layout = "_Layout";
 }
 
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 <main class="main-content">
     <div class="breadcrumb-area breadcrumb-height"
          data-bg-image="assets/images/breadcrumb/bg/1-1-1919x388.jpg">
@@ -35,7 +37,7 @@
                             <a class="nav-link" asp-route="client-order-dashboard">Orders</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-route="client-adress-dashboard">Addresses</a>
+                            <a class="nav-link" asp-route="client-address-dashboard">Addresses</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-route="client-account-detail">Account Details</a>

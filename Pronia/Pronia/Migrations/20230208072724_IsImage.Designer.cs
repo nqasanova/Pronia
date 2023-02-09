@@ -12,8 +12,8 @@ using Pronia.Database;
 namespace Pronia.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230204092228_BlogFile")]
-    partial class BlogFile
+    [Migration("20230208072724_IsImage")]
+    partial class IsImage
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -686,33 +686,6 @@ namespace Pronia.Migrations
                     b.HasIndex("TagId");
 
                     b.ToTable("ProductTags", (string)null);
-                });
-
-            modelBuilder.Entity("Pronia.Database.Models.Reward", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ImageName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageNameInFileSystem")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Rewards", (string)null);
                 });
 
             modelBuilder.Entity("Pronia.Database.Models.Role", b =>

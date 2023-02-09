@@ -7,7 +7,6 @@ namespace Pronia.Contracts.File
         Slider = 2,
         PaymentBenefit = 4,
         Feedback = 8,
-        Reward = 16,
-        Blog = 32
+        Blog = 16
     }
 }

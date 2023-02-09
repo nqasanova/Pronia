@@ -61,8 +61,6 @@
     <None Remove="Areas\Admin\ViewModels\Feedback\" />
     <None Remove="Areas\Admin\Views\Feedback\" />
     <None Remove="Areas\Admin\ViewModels\Order\" />
-    <None Remove="Areas\Admin\ViewModels\Reward\" />
-    <None Remove="Areas\Admin\Views\Reward\" />
     <None Remove="BCrypt" />
     <None Remove="BCrypt.Net-Core" />
     <None Remove="Areas\Client\ViewModels\ProductDetails\" />
@@ -152,8 +150,6 @@
     <Folder Include="Areas\Admin\ViewModels\Feedback\" />
     <Folder Include="Areas\Admin\Views\Feedback\" />
     <Folder Include="Areas\Admin\ViewModels\Order\" />
-    <Folder Include="Areas\Admin\ViewModels\Reward\" />
-    <Folder Include="Areas\Admin\Views\Reward\" />
     <Folder Include="Areas\Admin\ViewModels\User\" />
     <Folder Include="Areas\Client\ViewModels\ProductDetails\" />
     <Folder Include="Areas\Client\ViewModels\Product\" />
